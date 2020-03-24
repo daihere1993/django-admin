@@ -1,0 +1,23 @@
+<div class="app-layout">
+    <mat-drawer-container class="app-layout__container" fullscreen>
+        <!-- <mat-drawer #drawer class="app-layout__sidenav app-shadow--2dp" mode="side" opened>
+            <header>darkboard</header>
+            <mat-nav-list class="app-sidenav__menus">
+                <a
+                    mat-list-item
+                    *ngFor="let menu of menus"
+                    class="app-sidenav__link"
+                    [class.app-sidenav__link--current]="router.url === menu.link"
+                    [routerLink]="menu.link"
+                >
+                    <mat-icon>{{ menu.icon }}</mat-icon>
+                    {{ menu.name }}
+                </a>
+            </mat-nav-list>
+        </mat-drawer> -->
+        <main class="app-sidenav_content">
+            <router-outlet></router-outlet>
+            <!-- <button mat-button color="primary" (click)="drawer.toggle()">Toggle</button> -->
+        </main>
+    </mat-drawer-container>
+</div>

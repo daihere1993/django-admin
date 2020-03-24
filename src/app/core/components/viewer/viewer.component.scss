@@ -1,0 +1,31 @@
+@import '_variables';
+
+.app-viewer {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+    border-radius: 2px;
+    background-color: $app-dark-background-primary-color;
+}
+
+.app-viewer__header {
+    h1 {
+        margin: 0;
+    }
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: stretch;
+    line-height: normal;
+    padding: 20px 16px;
+    background-color: $app-viewer-title-backround-color;
+}
+
+.app-viewer__body {
+    color: #fff;
+    padding: 20px 16px;
+}

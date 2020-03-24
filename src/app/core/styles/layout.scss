@@ -1,0 +1,53 @@
+$page-header-height: 64px;
+$sidenav-width: 236px;
+
+.app-layout__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.app-layout__sidenav {
+    width: $sidenav-width;
+    max-height: 100%;
+
+    header {
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        height: $page-header-height;
+        line-height: $page-header-height;
+        background: rgba(0, 0, 0, 0.85);
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .app-sidenav__menus {
+        .app-sidenav__link {
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-size: 13px !important;
+            font-weight: 500;
+            mat-icon {
+                margin-right: 22px;
+                font-size: 22px;
+            }
+
+            &--current {
+                border-left: 2px solid mat-color(map-get($dark-theme, primary));
+                background: rgba(0, 0, 0, 0.25);
+                color: mat-color(map-get($dark-theme, primary));
+            }
+        }
+    }
+}
+
+.app-sidenav_content {
+    padding: $page-header-height 20px 60px 20px;
+    height: 100%;
+    overflow: scroll;
+    background: url('/assets/images/Dark_background_1920x1080.png') center top no-repeat;
+    background-size: cover;
+}

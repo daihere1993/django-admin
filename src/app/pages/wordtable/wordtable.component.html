@@ -1,0 +1,122 @@
+<div class="action-group">
+    <button mat-flat-button class="group-change" color="warn" (click)="addGroup()">
+        Add Group
+    </button>
+    <button mat-flat-button class="add-list" color="primary" (click)="addList()">
+        Add List
+    </button>
+</div>
+
+<div class="row">
+    <div class="col-8">
+        <app-viewer>
+            <app-viewer-header>
+                <h1>Table Panel</h1>
+            </app-viewer-header>
+            <app-viewer-body class="no-padding">
+                <div class="search-bar">
+                    <mat-form-field style="max-width: 80px; margin-right: 6px;">
+                        <mat-label>Group</mat-label>
+                        <mat-select [(value)]="filterGroupName">
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let group of wordGroups" [value]="group.name">
+                                {{ group.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field style="max-width: 70px; margin-right: 6px;">
+                        <mat-label>List</mat-label>
+                        <mat-select [(value)]="filterListName">
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let list of filterLists" [value]="list.name">
+                                {{ list.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Search</mat-label>
+                        <input matInput autocomplete="off" (keyup)="onFileterTable($event)" />
+                    </mat-form-field>
+                </div>
+                <ngx-datatable
+                    #table
+                    class="dark"
+                    [rows]="tableData$ | async"
+                    [columnMode]="'flex'"
+                    [selectionType]="'single'"
+                    (select)="onSelectRow($event)"
+                    [selectCheck]="tableSelectCheck"
+                    [headerHeight]="'40'"
+                    [footerHeight]="'40'"
+                    [limit]="10"
+                    [rowHeight]="'40'"
+                    [reorderable]="'true'"
+                >
+                    <ngx-datatable-column
+                        *ngFor="let column of tableCols"
+                        [summaryTemplate]="column.template"
+                        [prop]="column.prop"
+                        [flexGrow]="column.flexGrowp"
+                    >
+                        <ng-template let-value="value" ngx-datatable-cell-template>
+                            {{ getCellValue(column, value) }}
+                        </ng-template>
+                    </ngx-datatable-column>
+                </ngx-datatable>
+            </app-viewer-body>
+        </app-viewer>
+    </div>
+
+    <div class="col-4" style="max-width: 400px;">
+        <app-viewer>
+            <app-viewer-header>
+                <h1>Edit Panel</h1>
+            </app-viewer-header>
+            <app-viewer-body>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Group</mat-label>
+                    <mat-select [(value)]="selectedGroupName">
+                        <mat-option *ngFor="let group of wordGroups" [value]="group.name">
+                            {{ group.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>List</mat-label>
+                    <mat-select [(value)]="selectedListName">
+                        <mat-option *ngFor="let list of formLists" [value]="list.name">
+                            {{ list.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Word</mat-label>
+                    <input
+                        type="text"
+                        #wordNameInput
+                        [(ngModel)]="wordName"
+                        matInput
+                        autocomplete="off"
+                        spellcheck="true"
+                    />
+                </mat-form-field>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Description</mat-label>
+                    <input #wordDesInput [(ngModel)]="wordDes" matInput autocomplete="off" (keyup.enter)="onSave()" />
+                </mat-form-field>
+                <div class="btn-group" style="width: 100%;">
+                    <button mat-flat-button (click)="onSave()" color="primary">Save</button>
+                    <button
+                        *ngIf="selectedRow"
+                        mat-flat-button
+                        (click)="onDelete()"
+                        color="accent"
+                        style="float: right;"
+                    >
+                        Delete
+                    </button>
+                </div>
+            </app-viewer-body>
+        </app-viewer>
+    </div>
+</div>

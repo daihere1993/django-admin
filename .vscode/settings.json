@@ -1,0 +1,10 @@
+{
+    "editor.autoIndent": "keep",
+    "editor.foldingStrategy": "indentation",
+    "vetur.format.options.tabSize": 4,
+    "sass.disableAutoIndent": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggest.showSnippets": false
+}

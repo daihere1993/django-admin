@@ -1,7 +1,7 @@
 import { createSelector, createFeatureSelector } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 
-import { Word, WordGroup, WordList } from '@statics/models/word.model';
+import { Word, WordGroup, WordList } from '@definition/word';
 import * as wordActions from './word.action';
 import * as _ from 'lodash';
 

@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Word, WordGroup, WordList } from '@statics/models/word.model';
+import { Word, WordGroup, WordList } from '@definition/word';
 
 export interface UpdateStr<T> {
     id: string;

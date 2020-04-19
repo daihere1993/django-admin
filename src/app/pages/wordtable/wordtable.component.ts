@@ -1,9 +1,9 @@
 import { listSelector, WordListState, selectAllWordLists } from './../../core/states/word/word.reducer';
-import { Subject, Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 import { Component, OnInit, ViewChild, ElementRef, Inject, EventEmitter } from '@angular/core';
-import { Store, select, createSelector } from '@ngrx/store';
+import { Store, createSelector } from '@ngrx/store';
 
-import { Word, WordGroup, WordList } from '@statics/models/word.model';
+import { Word, WordGroup, WordList } from '@definition/word';
 import { selectAllWords, selectAllWordGroups, CacheState } from '@states/word/word.reducer';
 import * as wordActions from '@states/word/word.action';
 import { DatatableComponent } from '@swimlane/ngx-datatable';

@@ -21,7 +21,8 @@
             "@states/*": ["app/core/states/*"],
             "@interface/*": ["app/statics/interfaces/*"],
             "@components/*": ["app/core/components/*"],
-            "@services/*": ["app/core/services/*"]
+            "@services/*": ["app/core/services/*"],
+            "@definition/*": ["../node_modules/@daihere1993/dsp/lib/interface/*"]
         }
     },
     "angularCompilerOptions": {

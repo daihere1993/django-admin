@@ -1,6 +1,6 @@
 import { listSelector, WordListState, CacheState } from './word.reducer';
 import { Store, createSelector } from '@ngrx/store';
-import { Word, WordList, WordGroup } from '@statics/models/word.model';
+import { Word, WordList, WordGroup } from '@definition/word';
 import { EntityService } from '@services/entity.service';
 import { Injectable } from '@angular/core';
 import { Observable, of, merge } from 'rxjs';
@@ -150,7 +150,7 @@ export class WordEffect {
     > = this.actions$.pipe(
         ofType(wordActions.ActionTypes.ADD_WORD_LIST),
         mergeMap(({ payload }) => {
-            const list: WordList = payload;
+            const list: any = payload;
             return this.entityService
                 .addEntity<WordList>({ model: 'word_list', entity: list })
                 .pipe(

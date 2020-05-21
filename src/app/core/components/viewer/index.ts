@@ -1,4 +1,9 @@
-export { AppViewerComponent } from './viewer.component';
-export { AppViewerHeaderComponent } from './viewer-header.component';
-export { AppViewerBodyComponent } from './viewer-body.component';
-export { AppViewerModule } from './viewer.module';
+import AppViewerComponent from './viewer.component';
+import AppViewerHeaderComponent from './viewer-header.component';
+import AppViewerBodyComponent from './viewer-body.component';
+import AppViewerModule from './viewer.module';
+
+export { AppViewerComponent };
+export { AppViewerHeaderComponent };
+export { AppViewerBodyComponent };
+export { AppViewerModule };

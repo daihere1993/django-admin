@@ -1,2 +1,5 @@
-export { WordtableComponent } from './wordtable.component';
-export { WordtableModule } from './wordtable.module';
+import { WordtableComponent } from './wordtable.component';
+import WordtableModule from './wordtable.module';
+
+export { WordtableModule };
+export { WordtableComponent };

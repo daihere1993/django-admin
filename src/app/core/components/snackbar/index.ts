@@ -1,2 +1,5 @@
-export { AppSnackBarComponent } from './snacbar.component';
-export { AppSnackBarModule } from './snacbar.module';
+import AppSnackBarComponent from './snacbar.component';
+import AppSnackBarModule from './snacbar.module';
+
+export { AppSnackBarComponent };
+export { AppSnackBarModule };

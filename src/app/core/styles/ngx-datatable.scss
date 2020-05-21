@@ -3,122 +3,122 @@
 
 // Customize dark theme
 .ngx-datatable.dark {
-    box-shadow: none;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #fff;
+  font-size: 13px;
+
+  .datatable-header {
+    background: $app-dark-background-primary-color;
     color: #fff;
-    font-size: 13px;
 
-    .datatable-header {
-        background: $app-dark-background-primary-color;
+    .datatable-header-cell {
+      text-align: left;
+      padding: 0.5rem 1.2rem;
+      font-weight: bold;
+
+      .datatable-header-cell-label {
+        line-height: 24px;
+      }
+    }
+  }
+
+  .datatable-body {
+    background: $app-dark-background-primary-color;
+
+    .datatable-body-row {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+      .datatable-body-cell {
+        text-align: left;
+        padding: 0.5rem 1.2rem;
+        vertical-align: top;
+      }
+
+      &:hover {
+        background: #333;
+        border: none;
+        transition-property: background;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+      }
+
+      &:focus {
+        background-color: #232837;
+      }
+
+      &.active {
+        background-color: #1483ff;
         color: #fff;
+      }
+    }
+  }
 
-        .datatable-header-cell {
-            text-align: left;
-            padding: 0.5rem 1.2rem;
-            font-weight: bold;
+  .datatable-footer {
+    background: $app-dark-background-primary-color;
+    color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
 
-            .datatable-header-cell-label {
-                line-height: 24px;
-            }
-        }
+    .page-count {
+      line-height: 50px;
+      height: 50px;
+      padding: 0 1.2rem;
     }
 
-    .datatable-body {
-        background: $app-dark-background-primary-color;
+    .datatable-pager {
+      margin: 0 10px;
+      vertical-align: top;
 
-        .datatable-body-row {
-            border-top: 1px solid rgba(0, 0, 0, 0.12);
+      ul {
+        li {
+          margin: 10px 0px;
 
-            .datatable-body-cell {
-                text-align: left;
-                padding: 0.5rem 1.2rem;
-                vertical-align: top;
+          &:not(.disabled) {
+            &.active a,
+            &:hover a {
+              background-color: #333;
+              font-weight: bold;
             }
-
-            &:hover {
-                background: #333;
-                border: none;
-                transition-property: background;
-                transition-duration: 0.3s;
-                transition-timing-function: linear;
-            }
-
-            &:focus {
-                background-color: #232837;
-            }
-
-            &.active {
-                background-color: #1483ff;
-                color: #fff;
-            }
+          }
         }
-    }
+      }
 
-    .datatable-footer {
-        background: $app-dark-background-primary-color;
+      a {
+        height: 22px;
+        min-width: 24px;
+        line-height: 22px;
+        padding: 0;
+        border-radius: 3px;
+        margin: 0 3px;
+        text-align: center;
+        vertical-align: top;
+        text-decoration: none;
+        vertical-align: bottom;
         color: #fff;
-        border-top: 1px solid rgba(0, 0, 0, 0.12);
+      }
 
-        .page-count {
-            line-height: 50px;
-            height: 50px;
-            padding: 0 1.2rem;
-        }
-
-        .datatable-pager {
-            margin: 0 10px;
-            vertical-align: top;
-
-            ul {
-                li {
-                    margin: 10px 0px;
-
-                    &:not(.disabled) {
-                        &.active a,
-                        &:hover a {
-                            background-color: #333;
-                            font-weight: bold;
-                        }
-                    }
-                }
-            }
-
-            a {
-                height: 22px;
-                min-width: 24px;
-                line-height: 22px;
-                padding: 0;
-                border-radius: 3px;
-                margin: 0 3px;
-                text-align: center;
-                vertical-align: top;
-                text-decoration: none;
-                vertical-align: bottom;
-                color: #fff;
-            }
-
-            .datatable-icon-left,
-            .datatable-icon-skip,
-            .datatable-icon-right,
-            .datatable-icon-prev {
-                font-size: 18px;
-                line-height: 27px;
-                padding: 0 3px;
-            }
-        }
+      .datatable-icon-left,
+      .datatable-icon-skip,
+      .datatable-icon-right,
+      .datatable-icon-prev {
+        font-size: 18px;
+        line-height: 27px;
+        padding: 0 3px;
+      }
     }
+  }
 
-    .datatable-summary-row {
-        .datatable-body-row {
-            background-color: $app-dark-background-primary-color;
+  .datatable-summary-row {
+    .datatable-body-row {
+      background-color: $app-dark-background-primary-color;
 
-            &:hover {
-                background-color: #333;
-            }
+      &:hover {
+        background-color: #333;
+      }
 
-            .datatable-body-cell {
-                font-weight: bold;
-            }
-        }
+      .datatable-body-cell {
+        font-weight: bold;
+      }
     }
+  }
 }

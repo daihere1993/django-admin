@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { AjaxService } from './ajax.service';
-import { EntityService } from './entity.service';
+import AjaxService from './ajax.service';
+import EntityService from './entity.service';
 
 @NgModule({
-    providers: [AjaxService, EntityService]
+  providers: [AjaxService, EntityService],
 })
-export class ServicesModule {}
+export default class ServicesModule {}

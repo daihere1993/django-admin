@@ -1,28 +1,28 @@
 .search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 8px;
-    mat-form-field {
-        width: 50%;
-    }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  mat-form-field {
+    width: 50%;
+  }
 }
 
 .action-group {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    .group-change {
-        float: right;
-    }
-    .add-list {
-        float: right;
-    }
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  .group-change {
+    float: right;
+  }
+  .add-list {
+    float: right;
+  }
 }
 
 .group-container {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.25);
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-snackbar',
-    templateUrl: './snackbar.component.html'
+  selector: 'app-snackbar',
+  templateUrl: './snackbar.component.html',
 })
-export class AppSnackBarComponent {}
+export default class AppSnackBarComponent {}

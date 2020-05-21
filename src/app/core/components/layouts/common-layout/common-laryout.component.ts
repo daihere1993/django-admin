@@ -1,20 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { NavMenuItem } from '@interface/common';
 
 @Component({
-    selector: 'app-common-layout',
-    templateUrl: './common-layout.component.html'
+  selector: 'app-common-layout',
+  templateUrl: './common-layout.component.html',
 })
-export class AppCommonLayoutComponent {
-    public menus: NavMenuItem[] = [
-        {
-            name: 'Wordtable',
-            link: '/app/wordtable',
-            icon: 'home'
-        }
-    ];
+export default class AppCommonLayoutComponent {
+  public menus: NavMenuItem[] = [
+    {
+      name: 'Wordtable',
+      link: '/app/wordtable',
+      icon: 'home',
+    },
+  ];
 
-    constructor(public router: Router) {}
+  constructor(public router: Router) {}
 }

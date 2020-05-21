@@ -1,32 +1,32 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "baseUrl": "./src",
-        "outDir": "./dist/out-tsc",
-        "sourceMap": true,
-        "declaration": false,
-        "downlevelIteration": true,
-        "experimentalDecorators": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "importHelpers": true,
-        "target": "es2015",
-        "typeRoots": ["node_modules/@types"],
-        "emitDecoratorMetadata": true,
-        "lib": ["es2017", "dom", "es2015.generator", "es2015.iterable"],
-        "paths": {
-            "@app/*": ["app/*"],
-            "@pages/*": ["app/pages/*"],
-            "@statics/*": ["app/statics/*"],
-            "@states/*": ["app/core/states/*"],
-            "@interface/*": ["app/statics/interfaces/*"],
-            "@components/*": ["app/core/components/*"],
-            "@services/*": ["app/core/services/*"],
-            "@definition/*": ["../node_modules/@daihere1993/dsp/lib/interface/*"]
-        }
-    },
-    "angularCompilerOptions": {
-        "fullTemplateTypeCheck": true,
-        "strictInjectionParameters": true
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "lib": ["es2017", "dom", "es2015.generator", "es2015.iterable"],
+    "paths": {
+      "@app/*": ["app/*"],
+      "@pages/*": ["app/pages/*"],
+      "@statics/*": ["app/statics/*"],
+      "@states/*": ["app/core/states/*"],
+      "@interface/*": ["app/statics/interfaces/*"],
+      "@components/*": ["app/core/components/*"],
+      "@services/*": ["app/core/services/*"],
+      "@definition/*": ["../node_modules/@daihere1993/dsp/lib/interface/*"]
     }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }

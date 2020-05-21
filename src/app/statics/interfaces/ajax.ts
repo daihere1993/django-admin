@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/class-name-casing */
 /**
  * EQ: equal
  * GE: more than
@@ -8,16 +9,16 @@
 export type AjaxFilter = 'EQ' | 'GE' | 'GEE' | 'LT' | 'LTE';
 
 export interface Filter {
-    field: string;
-    match: AjaxFilter;
-    value: any;
+  field: string;
+  match: AjaxFilter;
+  value: any;
 }
 
 export enum HttpResponseStatus {
-    SUCCESS,
-    FAIL
+  SUCCESS,
+  FAIL,
 }
 
 export interface _HttpResponsebase {
-    ok: number;
+  ok: number;
 }

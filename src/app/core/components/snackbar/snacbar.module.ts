@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { AppSnackBarComponent } from './snacbar.component';
+import AppSnackBarComponent from './snacbar.component';
 
 @NgModule({
-    declarations: [AppSnackBarComponent],
-    imports: [CommonModule, MatSnackBarModule],
-    exports: [AppSnackBarComponent]
+  declarations: [AppSnackBarComponent],
+  imports: [CommonModule, MatSnackBarModule],
+  exports: [AppSnackBarComponent],
 })
-export class AppSnackBarModule {}
+export default class AppSnackBarModule {}

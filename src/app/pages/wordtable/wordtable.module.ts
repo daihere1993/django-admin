@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { WordtableComponent, _AppGroupdDialog } from './wordtable.component';
-import { wordReducer, wordGroupReducer, wordListReducer } from '@states/word/word.reducer';
-import { WordEffect } from '@states/word/word.effect';
+import {
+  wordReducer,
+  wordGroupReducer,
+  wordListReducer,
+} from '@states/word/word.reducer';
+import WordEffect from '@states/word/word.effect';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
@@ -20,28 +23,29 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { AppViewerModule } from '@components/viewer';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AppSnackBarModule } from '@components/snackbar';
+import { WordtableComponent, _AppGroupdDialog } from './wordtable.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        StoreModule.forFeature('word', wordReducer),
-        StoreModule.forFeature('word_group', wordGroupReducer),
-        StoreModule.forFeature('word_list', wordListReducer),
-        EffectsModule.forFeature([WordEffect]),
-        MatPaginatorModule,
-        MatInputModule,
-        MatFormFieldModule,
-        MatListModule,
-        MatIconModule,
-        MatDialogModule,
-        MatSelectModule,
-        MatSidenavModule,
-        MatButtonModule,
-        AppViewerModule,
-        NgxDatatableModule,
-        AppSnackBarModule
-    ],
-    declarations: [WordtableComponent, _AppGroupdDialog]
+  imports: [
+    CommonModule,
+    FormsModule,
+    StoreModule.forFeature('word', wordReducer),
+    StoreModule.forFeature('word_group', wordGroupReducer),
+    StoreModule.forFeature('word_list', wordListReducer),
+    EffectsModule.forFeature([WordEffect]),
+    MatPaginatorModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatIconModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatButtonModule,
+    AppViewerModule,
+    NgxDatatableModule,
+    AppSnackBarModule,
+  ],
+  declarations: [WordtableComponent, _AppGroupdDialog],
 })
-export class WordtableModule {}
+export default class WordtableModule {}

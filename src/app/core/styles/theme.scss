@@ -19,17 +19,17 @@ $dark-background-primary-color: $app-dark-background-primary-color;
 $dark-background-dialog-color: $app-dark-background-dialog-color;
 $original-background-palettle: map-get($dark-theme, background);
 $background-palettle: map_merge(
-    $original-background-palettle,
-    (
-        background: $dark-background-primary-color,
-        dialog: $dark-background-dialog-color
-    )
+  $original-background-palettle,
+  (
+    background: $dark-background-primary-color,
+    dialog: $dark-background-dialog-color,
+  )
 );
 $dark-theme: map_merge(
-    $dark-theme,
-    (
-        background: $background-palettle
-    )
+  $dark-theme,
+  (
+    background: $background-palettle,
+  )
 );
 
 // Include theme styles for core and each component used in your app.
